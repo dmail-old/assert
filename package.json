@@ -1,0 +1,20 @@
+{
+	"name": "@dmail/assert",
+	"version": "0.0.1",
+	"license": "UNLICENSED",
+	"dependencies": {
+		"@dmail/timeout": "git+https://github.com/dmail/timeout",
+		"@dmail/thenable": "git+https://github.com/dmail/thenable"
+	},
+	"devDependencies": {
+
+	},
+	"scripts": {
+		"test": "system-test",
+		"link-dev": "npm link ../timeout && npm link ../thenable"
+	},
+	"repository": {
+	    "type": "git",
+	    "url": "https://github.com/dmail/assert"
+	}
+}
