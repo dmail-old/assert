@@ -2,7 +2,7 @@ import CallSignature from '../lib/api/call-signature.js';
 import assert from 'node/assert';
 
 function createArgSignature(){
-	return CallSignature.create(undefined, Array.prototype.slice.call(arguments));
+	return CallSignature.create(Array.prototype.slice.call(arguments));
 }
 
 function signatureEquals(callSignature, args, expectedSignedArgs){
@@ -25,10 +25,6 @@ function signatureFail(callSignature, args){
 			throw e;
 		}
 	}
-}
-
-function createThisSignature(expectedThis){
-	return CallSignature.create(expectedThis);
 }
 
 export default function(){
@@ -66,10 +62,5 @@ export default function(){
 
 	signatureEquals(expectTwoArgWithSecondDependingOnFirst, [1], [1, 2]);
 	signatureEquals(expectTwoArgWithSecondDependingOnFirst, [1, 3], [1, 3]);
-
-	var expectThisToBeAString = createThisSignature({type: String, value: 'foo'});
-
-	assert.equal(expectThisToBeAString.signThis(''), '');
-	assert.equal(expectThisToBeAString.signThis(undefined), 'foo');
 }
 
