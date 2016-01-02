@@ -8,11 +8,11 @@
 		"@dmail/thenable": "git+https://github.com/dmail/thenable"
 	},
 	"devDependencies": {
-		"system-platform": "git+https://github.com/dmail/system-platform"
+		"run-test": "git+https://github.com/dmail/run-test"
 	},
 	"scripts": {
-		"test": "system-platform ./test/index.js",
-		"link-dev": "npm link ../timeout && npm link ../thenable & npm link ../system-platform"
+		"test": "run-test",
+		"link-dev": "npm link ../timeout && npm link ../thenable & npm link ../run-test & npm link ../schema"
 	},
 	"repository": {
 	    "type": "git",
