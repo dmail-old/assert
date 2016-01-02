@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"license": "UNLICENSED",
 	"dependencies": {
+		"@dmail/api": "git+https://github.com/dmail/api",
 		"@dmail/timeout": "git+https://github.com/dmail/timeout",
 		"@dmail/thenable": "git+https://github.com/dmail/thenable"
 	},
